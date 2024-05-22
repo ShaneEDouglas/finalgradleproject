@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Agent Servlet Declaration -->
+    <servlet>
+        <servlet-name>AgentServlet</servlet-name>
+        <servlet-class>controllers.AgentServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet-mapping>
+        <servlet-name>AgentServlet</servlet-name>
+        <url-pattern>/api/agents</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Client Servlet Mapping -->
+    <servlet>
+        <servlet-name>ClientServlet</servlet-name>
+        <servlet-class>controllers.ClientServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet-mapping>
+        <servlet-name>ClientServlet</servlet-name>
+        <url-pattern>/api/clients</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Property Servlet Mapping -->
+    <servlet>
+        <servlet-name>PropertyServlet</servlet-name>
+        <servlet-class>controllers.PropertyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PropertyServlet</servlet-name>
+        <url-pattern>/api/properties</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Transaction Servlet Mapping -->
+    <servlet>
+        <servlet-name>TransactionServlet</servlet-name>
+        <servlet-class>controllers.TransactionServlet</servlet-class>
+    </servlet>
+   
+    <servlet-mapping>
+        <servlet-name>TransactionServlet</servlet-name>
+        <url-pattern>/api/transactions</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Viewing Servlet Mapping -->
+    <servlet>
+        <servlet-name>ViewingServlet</servlet-name>
+        <servlet-class>controllers.ViewingServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet-mapping>
+        <servlet-name>ViewingServlet</servlet-name>
+        <url-pattern>/api/viewings</url-pattern>
+    </servlet-mapping>
+    
+   
+
+</web-app>
+

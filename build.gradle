@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'jakarta.platform:jakarta.jakartaee-web-api:10.0.0'
+    providedCompile 'javax:javaee-api:8.0'
+    
+    testImplementation     'junit:junit:4.13'
+    implementation group: 'org.flywaydb', name: 'flyway-core', version: '3.2.1'
+    testImplementation group: 'org.apache.derby', name: 'derby', version: '10.14.2.0'
+    implementation 'org.apache.derby:derby:10.14.2.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
